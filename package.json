@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"ioredis",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "ioredis",
+    "description": "api documentation for [ioredis (v2.5.0)](https://github.com/luin/ioredis#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-ioredis.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ioredis) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ioredis.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ioredis)",
     "devDependencies": {
-        "ioredis": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "ioredis": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-ioredis",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-ioredis",
+    "keywords": [
+        "documentation",
+        "ioredis"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_ioredis.js",
+    "name": "npmdoc-ioredis",
+    "nameAlias": "npmdoc_ioredis",
+    "nameOriginal": "npmdoc-ioredis",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-ioredis.git"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }

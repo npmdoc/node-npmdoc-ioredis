@@ -1,4 +1,7 @@
-# api documentation for  [ioredis (v2.5.0)](https://github.com/luin/ioredis#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-ioredis.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ioredis) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ioredis.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ioredis)
+# npmdoc-ioredis
+
+#### basic api documentation for  [ioredis (v2.5.0)](https://github.com/luin/ioredis#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-ioredis.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ioredis) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ioredis.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ioredis)
+
 #### A delightful, performance-focused Redis client for Node and io.js
 
 [![NPM](https://nodei.co/npm/ioredis.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ioredis)
@@ -94,7 +97,8 @@
         "test": "NODE_ENV=test mocha",
         "test:cov": "NODE_ENV=test node ./node_modules/istanbul/lib/cli.js cover --preserve-comments ./node_modules/mocha/bin/_mocha -- -R spec"
     },
-    "version": "2.5.0"
+    "version": "2.5.0",
+    "bin": {}
 }
 ```
 
